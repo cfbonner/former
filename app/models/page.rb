@@ -1,4 +1,5 @@
 class Page < ApplicationRecord
+  has_many :forms, dependent: :nullify
   validates :title, :slug, presence: true
   before_save :parameterize_slug
 

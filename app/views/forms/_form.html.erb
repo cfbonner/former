@@ -1,0 +1,32 @@
+<%= form_with(model: form) do |f| %>
+  <% if form.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(form.errors.count, "error") %> prohibited this form from being saved:</h2>
+
+      <ul>
+        <% form.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name, style: "display: block" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :legend, style: "display: block" %>
+    <%= f.text_field :legend %>
+  </div>
+
+  <div>
+    <%= f.label :page_id, style: "display: block" %>
+    <%= f.select :page_id, Page.all.limit(500).pluck(:title, :id), include_blank: true %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
