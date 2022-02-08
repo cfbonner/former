@@ -1,0 +1,2 @@
+module Inputs::BooleanInputsHelper
+end

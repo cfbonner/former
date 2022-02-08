@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Boolean inputs</h1>
+
+<div id="inputs_boolean_inputs">
+  <% @inputs_boolean_inputs.each do |inputs_boolean_input| %>
+    <%= render inputs_boolean_input %>
+    <p>
+      <%= link_to "Show this boolean input", inputs_boolean_input %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New boolean input", new_inputs_boolean_input_path %>

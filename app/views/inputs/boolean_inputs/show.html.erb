@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @inputs_boolean_input %>
+
+<div>
+  <%= link_to "Edit this boolean input", edit_inputs_boolean_input_path(@inputs_boolean_input) %> |
+  <%= link_to "Back to boolean inputs", inputs_boolean_inputs_path %>
+
+  <%= button_to "Destroy this boolean input", @inputs_boolean_input, method: :delete %>
+</div>

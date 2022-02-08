@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Text inputs</h1>
+
+<div id="inputs_text_inputs">
+  <% @inputs_text_inputs.each do |inputs_text_input| %>
+    <%= render inputs_text_input %>
+    <p>
+      <%= link_to "Show this text input", inputs_text_input %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New text input", new_inputs_text_input_path %>
