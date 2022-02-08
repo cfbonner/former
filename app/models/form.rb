@@ -1,6 +1,6 @@
 class Form < ApplicationRecord
   belongs_to :page
-  has_many :inputs
+  has_many :inputs, dependent: :nullify
 
   before_save :parameterize_name
 

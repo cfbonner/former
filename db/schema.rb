@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_08_225130) do
     t.integer "inputable_id"
     t.string "inputable_type"
     t.integer "position"
-    t.bigint "form_id", null: false
+    t.bigint "form_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["form_id"], name: "index_inputs_on_form_id"
