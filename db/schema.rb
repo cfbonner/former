@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_08_223825) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_08_225130) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_08_223825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["page_id"], name: "index_forms_on_page_id"
+  end
+
+  create_table "inputs", force: :cascade do |t|
+    t.integer "inputable_id"
+    t.string "inputable_type"
+    t.integer "position"
+    t.bigint "form_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["form_id"], name: "index_inputs_on_form_id"
   end
 
   create_table "inputs_boolean_inputs", force: :cascade do |t|
@@ -46,4 +56,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_08_223825) do
   end
 
   add_foreign_key "forms", "pages"
+  add_foreign_key "inputs", "forms"
 end

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inputable_id: 1
+  inputable_type: MyString
+  position: 1
+  form: one
+
+two:
+  inputable_id: 1
+  inputable_type: MyString
+  position: 1
+  form: two

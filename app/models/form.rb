@@ -1,5 +1,7 @@
 class Form < ApplicationRecord
   belongs_to :page
+  has_many :inputs
+
   before_save :parameterize_name
 
   validate :name, :legend

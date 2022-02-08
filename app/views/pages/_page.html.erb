@@ -4,4 +4,19 @@
     <%= page.title %>
   </h1>
 
+  <section>
+    <% page.forms.each do |form| %>
+      <form url='/'>
+        <fieldset>
+          <legend>
+            <%= render form %>
+            <% form.inputs.each do |input| %>
+              <%= render input %>
+            <% end %>
+          </legend>
+        </fieldset>
+      </form>
+    <% end %>
+  </section>
+
 </div>

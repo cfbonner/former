@@ -1,0 +1,25 @@
+<div id="<%= dom_id input %>">
+
+  <p>
+    <strong>Inputable:</strong>
+    <%= input.inputable_id %>
+  </p>
+
+  <p>
+    <strong>Inputable type:</strong>
+    <%= input.inputable_type %>
+  </p>
+
+  <p>
+    <strong>Position:</strong>
+    <%= input.position %>
+  </p>
+
+  <p>
+    <strong>Form:</strong>
+    <%= input.form_id %>
+  </p>
+
+  <%= render input.inputable if input.inputable %>
+
+</div>
