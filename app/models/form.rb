@@ -1,10 +1,10 @@
 class Form < ApplicationRecord
   belongs_to :page
-  before_save :parameterize_slug
+  before_save :parameterize_name
 
   validate :name, :legend
 
-  def parameterize_slug
+  def parameterize_name
     self.name = self.name.parameterize unless self.name.nil?
   end
 
